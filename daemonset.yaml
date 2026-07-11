@@ -4,19 +4,19 @@ metadata:
   name: my-daemon
   labels:
     app: myapp
-  Spec:
-    selector:
-      matchlabels:
+spec:
+   selector:
+      matchLabels:
         app: myapp
-      template:
-        metadata:
-          name: my-template
-          labels:
-            app: myapp
-          spec:
-            containers:
-              - name: daemon-container
-                image: amazon/cloudwatch-agent
-                ports:
-                  name: daemonport
-                  containerPort: 80
+   template:
+     metadata:
+       name: my-template
+       labels:
+         app: myapp
+     spec:
+       containers:
+         - name: daemon-container
+           image: amazon/cloudwatch-agent
+           ports:
+             - name: daemonport
+               containerPort: 80
