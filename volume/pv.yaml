@@ -11,7 +11,7 @@ spec:
   - ReadWriteOnce
   storageClassName: standard
   volumeMode: Filesystem 
-  PersistentVolumeReclaimPolicy: Retain
+  persistentVolumeReclaimPolicy: Retain
   hostPath:
     path: /mnt/data
-        
+
